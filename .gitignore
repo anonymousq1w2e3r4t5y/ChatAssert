@@ -1,0 +1,14 @@
+*pycache
+*/*pycache
+*/*/*pycache
+*/*/*/*pycache
+
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+*/*/*/.DS_Store
+*/*/*/*/.DS_Store
+*/*/*/*/*/.DS_Store
+*/*/*/*/*/*/.DS_Store
+*/*/*/*/*/*/*/.DS_Store
+*/*/*/*/*/*/*/*/.DS_Store

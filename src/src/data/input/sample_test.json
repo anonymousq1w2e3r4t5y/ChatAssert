@@ -1,0 +1,46 @@
+{
+    "projects": [
+        {
+            "userName": "cucumber-ltd",
+            "repoName": "cucumber-pro-plugin-jvm",
+            "subRepos": [],
+            "commitSHA": "a09ee0b1682d3cd8b68c240820e647d4515e931f",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "CiEnvironmentTest",
+                    "classPath": "src/test/java/io/cucumber/pro/environment/CiEnvironmentTest.java",
+                    "subRepo": "",
+                    "classTests": [
+                        {
+                            "testName": "recognises_circle",
+                            "startLn": 31,
+                            "endLn": 43,
+                            "testMethod": "@Test\n public void recognises_circle ( ) {\n     Map < String , String > env = new HashMap < > ( ) ; \n     env . put ( \"STR\" , \"STR\" ) ; \n     env . put ( \"STR\" , \"STR\" ) ; \n     env . put ( \"STR\" , \"STR\" ) ; \n     env . put ( \"STR\" , \"STR\" ) ; \n     assertEquals(\"STR\",CIEnvironment.detect(env).getCiName());\n}",
+                            "oracle": "assertEquals(\"STR\",CIEnvironment.detect(env).getCiName());",
+                            "oracleLn": 5,
+                            "focalFile": "src/main/java/io/cucumber/pro/environment/CIEnvironment.java",
+                            "focalName": "getCiName",
+                            "focalStartLn": 130,
+                            "focalEndLn": 132,
+                            "focalMethod": " public String getCiName ( ) { \n return ciName ; \n } "
+                        },
+                        {
+                            "testName": "is_inactive_by_default",
+                            "startLn": 12,
+                            "endLn": 16,
+                            "testMethod": "@Test\n public void is_inactive_by_default ( ) {\n     Map < String , String > env = new HashMap < > ( ) ; \n     assertNull(CIEnvironment.detect(env));\n}",
+                            "oracle": "assertNull(CIEnvironment.detect(env));",
+                            "oracleLn": 1,
+                            "focalFile": "src/main/java/io/cucumber/pro/environment/CIEnvironment.java",
+                            "focalName": "detect",
+                            "focalStartLn": 21,
+                            "focalEndLn": 30,
+                            "focalMethod": " public static CIEnvironment detect ( Map < String , String > env ) { \n CIEnvironment ci ; \n if ( ( ci = detectBamboo ( env ) ) != null ) return ci ; \n if ( ( ci = detectCircle ( env ) ) != null ) return ci ; \n if ( ( ci = detectJenkins ( env ) ) != null ) return ci ; \n if ( ( ci = detectTfs ( env ) ) != null ) return ci ; \n if ( ( ci = detectTravis ( env ) ) != null ) return ci ; \n if ( ( ci = detectWercker ( env ) ) != null ) return ci ; \n return null ; \n } "
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
